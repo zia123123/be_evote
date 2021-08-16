@@ -93,7 +93,7 @@ router.get('/api/calon/:voteId', CalonController.indexCalon);
 
 router.patch('/api/calon/update/:id',CalonController.find, CalonController.update);
 router.get('/api/calon/:id',CalonController.find, CalonController.show);
-router.delete('/api/calon/delete/:id',CalonController.find, CalonController.delete);
+router.patch('/api/calon/delete/:id',CalonController.find, CalonController.delete);
 
 router.get('/api/all/calon/', CalonController.indexAll);
 //voted

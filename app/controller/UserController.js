@@ -171,7 +171,7 @@ async updatePassword(req, res) {
     let password = bcrypt.hashSync("password123", Number.parseInt(authConfig.rounds))
     req.user.password = password;
     req.user.save().then(user => {
-    return apiResponse.successResponseWithData(res, "SUCCESS", user);
+    return apiResponse.successResponseWithData(res, "Password Berhasil di update Menjadi : password123", user);
     })
 },
 
