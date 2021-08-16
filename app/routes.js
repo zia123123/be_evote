@@ -82,7 +82,7 @@ router.get('/api/vote/', VoteController.index);
 router.patch('/api/vote/update/:id',VoteController.find, VoteController.update);
 router.get('/api/vote/:id',VoteController.find, VoteController.show);
 router.get('/api/vote/rt/:rt',VoteController.findRt, VoteController.show);
-router.patch('/api/vote/delete/:id',VoteController.find, VoteController.delete);
+router.delete('/api/vote/delete/:id',VoteController.find, VoteController.delete);
 
 //calon
 router.post('/api/calon/create',multer(multerConf).fields([{
