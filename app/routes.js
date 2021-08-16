@@ -101,7 +101,7 @@ router.post('/api/voted/create', VotedController.create);
 router.get('/api/voted/:voteid/:ktp', VotedController.find);
 router.get('/api/voted/vote', VotedController.index);
 router.get('/api/voted/all', VotedController.indeAll);
-router.get('/api/voted/log/:voteId', VotedController.index);
+router.get('/api/log/:voteId', VotedController.index);
 
 router.get('/api/bar/:voteid', VotedController.indexBar);
 
