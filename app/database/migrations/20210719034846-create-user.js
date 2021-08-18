@@ -19,7 +19,7 @@ module.exports = {
         type: Sequelize.BOOLEAN
       },
       noktp: {
-        type: Sequelize.STRING
+        type: Sequelize.BIGINT
       },
       createdAt: {
         allowNull: false,

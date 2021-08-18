@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
     },
     noktp: {
-      type: DataTypes.STRING,
+      type: DataTypes.BIGINT,
     },
     archived:{
       type: DataTypes.BOOLEAN,

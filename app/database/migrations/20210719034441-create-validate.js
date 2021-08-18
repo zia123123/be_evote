@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       noktp: {
-        type: Sequelize.STRING,
+        type: Sequelize.BIGINT,
         unique: true
       },
       nama: {

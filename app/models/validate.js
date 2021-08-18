@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
 
   const validate = sequelize.define('validates', {
     noktp: {
-      type: DataTypes.STRING,
+      type: DataTypes.BIGINT,
       unique: true
     },
     nama: {
