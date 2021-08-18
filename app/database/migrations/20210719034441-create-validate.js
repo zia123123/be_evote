@@ -18,6 +18,9 @@ module.exports = {
       rt: {
         type: Sequelize.INTEGER
       },
+      blok: {
+        type: Sequelize.CHAR
+      },
       status: {
         type: Sequelize.BOOLEAN
       },

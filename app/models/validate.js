@@ -16,6 +16,9 @@ module.exports = (sequelize, DataTypes) => {
     rt:{
       type: DataTypes.INTEGER,
     },
+    blok:{
+      type: DataTypes.CHAR,
+    },
     archived:{
       type: DataTypes.BOOLEAN,
     },

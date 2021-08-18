@@ -11,6 +11,7 @@ module.exports = {
         noktp: req.body.noktp,
         nama: req.body.nama,
         rt: req.body.rt,
+        blok: req.body.blok,
         status : false,
         archived : false
     }).then(validates => {
