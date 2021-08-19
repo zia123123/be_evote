@@ -24,8 +24,8 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   vote.associate = function(models) {
-    vote.hasMany(models.calons, { foreginKey: "vote"})
-    vote.hasMany(models.voteds, { foreginKey: "vote"})
+    vote.hasMany(models.calons,{ onDelete: 'cascade' }, { foreginKey: "vote"})
+    vote.hasMany(models.voteds,{ onDelete: 'cascade' }, { foreginKey: "vote"})
   };
 
   return vote;
