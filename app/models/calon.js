@@ -23,8 +23,8 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   calon.associate = function(models) {
-    calon.belongsTo(models.votes,{ onDelete: 'cascade' }, { foreignKey: "voteId"})
-    calon.hasMany(models.voteds,{ onDelete: 'cascade' }, { foreginKey: "calon"})
+    calon.belongsTo(models.votes,{ onDelete: 'cascade' },{ constraints: true}, { foreignKey: "voteId"})
+    calon.hasMany(models.voteds,{ onDelete: 'cascade' },{ constraints: true}, { foreginKey: "calon"})
   };
 
   return calon;

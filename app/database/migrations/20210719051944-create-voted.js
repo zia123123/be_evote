@@ -17,7 +17,9 @@ module.exports = {
         references: {
           model: "votes",
           key: "id"
-        }
+        },
+        onDelete: 'cascade',
+        onUpdate: 'cascade'
       },
       pilih: {
         type: Sequelize.STRING
@@ -28,7 +30,9 @@ module.exports = {
         references: {
           model: "calons",
           key: "id"
-        }
+        },
+        onDelete: 'cascade',
+        onUpdate: 'cascade'
       },
       createdAt: {
         allowNull: false,

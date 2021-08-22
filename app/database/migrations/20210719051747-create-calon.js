@@ -29,7 +29,9 @@ module.exports = {
         references: {
           model: "votes",
           key: "id"
-        }
+        },
+        onDelete: 'cascade',
+        onUpdate: 'cascade'
       },
       createdAt: {
         allowNull: false,

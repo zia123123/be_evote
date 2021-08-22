@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   voted.associate = function(models) {
-    voted.belongsTo(models.votes,{ onDelete: 'cascade' }, { foreignKey: "voteId"})
-    voted.belongsTo(models.calons,{ onDelete: 'cascade' }, { foreignKey: "calonId"})
+    voted.belongsTo(models.votes,{ onDelete: 'cascade' },{ constraints: true}, { foreignKey: "voteId"})
+    voted.belongsTo(models.calons,{ onDelete: 'cascade' },{ constraints: true}, { foreignKey: "calonId"})
   };
 
   return voted;
