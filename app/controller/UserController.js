@@ -147,7 +147,7 @@ async cektpku(req, res, next) {
 //CEK SUDAH REGIS ATAU BELUM
 async cekstatus(req, res) {
     if (req.validate.status == true) {
-        return apiResponse.notFoundResponse(res, "Nomor KTP anda sudah di gunakan");
+        return apiResponse.successResponseWithData(res, "Success", req.validate);
         } else {
             return apiResponse.successResponseWithData(res, "Lanjut", req.validate);
         }
