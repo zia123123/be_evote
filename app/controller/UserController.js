@@ -199,7 +199,7 @@ async updateTrue(req, res) {
     // Update to true
     async updateValidate(req, res) {
         req.validate.noktp = req.body.noktp;
-        req.validate.update().then(validate => {
+        req.validate.save().then(validate => {
         return apiResponse.successResponseWithData(res, "SUCCESS", validate);
         })
     },
@@ -207,7 +207,7 @@ async updateTrue(req, res) {
      // Update to true
      async updateNama(req, res) {
         req.validate.nama = req.body.nama;
-        req.validate.update().then(validate => {
+        req.validate.save().then(validate => {
         return apiResponse.successResponseWithData(res, "SUCCESS", validate);
         })
     },
