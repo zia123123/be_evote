@@ -90,6 +90,18 @@ signInUser(req, res) {
     }
 },
 
+
+    //FIND
+    async findValidate(req, res, next) {
+        let validate = await validates.findByPk(req.params.id);
+        if (!validate) {
+        return apiResponse.notFoundResponse(res, "Not Fond");
+        } else {
+            req.validate = validate;
+            next();
+        }
+    },
+
 async findKtp(req, res, next) {
     let user = await users.findOne({
         where: {
@@ -183,6 +195,15 @@ async updateTrue(req, res) {
     return apiResponse.successResponseWithData(res, "SUCCESS", validate);
     })
 },
+
+    // Update to true
+    async updateValidate(req, res) {
+        req.validate.noktp = req.body.noktp;
+        req.validate.save().then(validate => {
+        return apiResponse.successResponseWithData(res, "SUCCESS", validate);
+        })
+    },
+
 
 // Delete
 
