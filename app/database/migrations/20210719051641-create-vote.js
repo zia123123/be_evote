@@ -21,6 +21,9 @@ module.exports = {
         type: Sequelize.INTEGER,
         unique: true
       },
+      rw: {
+        type: Sequelize.BOOLEAN,
+      },
       archived: {
         type: Sequelize.BOOLEAN
       },

@@ -10,11 +10,11 @@ module.exports = {
   // dialect: process.env.DB_DIALECT || "mysql",
 
 
-  username: process.env.DB_USERNAME || "ziakasep",
-  password: process.env.DB_PASSWORD ||  "@Zia123123",
-  database: process.env.DB_DATABASE || "evote",
-  host: process.env.DB_HOST ||"45.13.132.252",
-  dialect: process.env.DB_DIALECT || "mysql",
+  // username: process.env.DB_USERNAME || "ziakasep",
+  // password: process.env.DB_PASSWORD ||  "@Zia123123",
+  // database: process.env.DB_DATABASE || "evote",
+  // host: process.env.DB_HOST ||"45.13.132.252",
+  // dialect: process.env.DB_DIALECT || "mysql",
 
 
   

@@ -11,6 +11,7 @@ module.exports = {
             judul: req.body.judul,
             deskripsi: req.body.deskripsi,
             archived: false,
+            rw: req.body.rw,
             rt: req.body.rt,
             photo: photo
         }).then(result => {

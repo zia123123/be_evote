@@ -16,6 +16,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       unique: true
     },
+    rw:{
+      type: DataTypes.BOOLEAN,
+    },
     archived:{
       type: DataTypes.BOOLEAN,
     },
