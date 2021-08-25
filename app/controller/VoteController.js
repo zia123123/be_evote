@@ -1,4 +1,5 @@
 const { votes } = require('../models/index');
+const { Op } = require("sequelize");
 const apiResponse = require("../helpers/apiResponse");
 
 module.exports = {
@@ -34,7 +35,10 @@ module.exports = {
         let vote = await votes.findAll({
             where: {
                 archived: false,
-                rt: req.params.rt
+                [Op.or]: [
+                    { rt: req.params.rt },
+                    { rw: true }
+                  ]
             },
         });
         if (!vote) {
