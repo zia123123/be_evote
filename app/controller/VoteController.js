@@ -35,8 +35,10 @@ module.exports = {
         let vote = await votes.findAll({
             where: {
                 archived: false,
-                rt: req.params.rt, 
                 [Op.or]: [
+                    { rt: req.params.rt, }
+                  ],
+                  [Op.or]: [
                     { rw: true }
                   ]
             },
