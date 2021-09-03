@@ -34,13 +34,10 @@ module.exports = {
     async findRt(req, res, next) {
         let vote = await votes.findAll({
             where: {
-                archived: false,
                 [Op.or]: [
-                    { rt: req.params.rt, }
-                  ],
-                  [Op.or]: [
-                    { rw: true }
-                  ]
+                    {rt: req.params.rt},
+                    {rw: true}
+                ]
             },
         });
         if (!vote) {
