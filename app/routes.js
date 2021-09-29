@@ -57,6 +57,8 @@ router.patch('/api/update/validate/:id', UserController.findValidate, UserContro
 
 router.put('/api/nama/update/:id', UserController.findValidate, UserController.updateNama);
 
+router.put('/api/updatert/user/:id', UserController.findValidate, UserController.updateRt);
+
 router.get('/api/validate/index', UserController.indexvalidate);
 router.post('/api/user/create', UserController.signupUser);
 router.post('/api/login', UserController.signInUser);

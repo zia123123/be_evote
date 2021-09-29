@@ -212,11 +212,28 @@ async updateTrue(req, res) {
         })
     },
 
+    async updateRt(req, res) {
+        req.validate.rt = req.body.rt;
+        req.validate.save().then(validate => {
+        return apiResponse.successResponseWithData(res, "SUCCESS", validate);
+        })
+    },
 
-// Delete
 
+    // Delete
 
+    async deleteUser(req, res) {
+    req.user.destroy().then(user => {
+        res.json({ msg: "Berhasil di delete" });
+    })
 
+    },
+
+    async deleteValidate(req, res) {
+        req.user.destroy().then(vote => {
+            res.json({ msg: "Berhasil di delete" });
+        })
+    }
 
 
 }
